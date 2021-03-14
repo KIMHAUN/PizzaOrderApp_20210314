@@ -5,8 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.ImageView
+import android.widget.TextView
 import kr.co.neoplus.pizzaorderapp_20210314.R
 import kr.co.neoplus.pizzaorderapp_20210314.datas.Store
+import org.w3c.dom.Text
 
 class StoreAdapter(
     val mContext : Context,
@@ -22,6 +25,13 @@ class StoreAdapter(
         }
 
         val row = tempRow!!
+
+        val storeData = mList[position]
+
+        val logoImg = row.findViewById<ImageView>(R.id.logoImg)
+        val storeNameTxt = row.findViewById<TextView>(R.id.storeNameTxt)
+
+        storeNameTxt.text = storeData.storeName
 
         return row
 
