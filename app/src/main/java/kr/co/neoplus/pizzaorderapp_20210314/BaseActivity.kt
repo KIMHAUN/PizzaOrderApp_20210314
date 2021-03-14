@@ -6,7 +6,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
     val mContext = this
 
-    abstract fun SetUpEvents()
-    abstract fun SetValues()
+    abstract fun setupEvents()
+    abstract fun setValues()
 
 }
