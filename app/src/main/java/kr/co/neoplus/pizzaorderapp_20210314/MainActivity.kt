@@ -22,7 +22,7 @@ class MainActivity : BaseActivity() {
     override fun setValues() {
         mvpa = MyViewPagerAdapter(supportFragmentManager)
         myViewPager.adapter = mvpa
-
+        myTabLayout.setupWithViewPager(myViewPager)
     }
 
 }
